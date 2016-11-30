@@ -60,7 +60,7 @@ class Character extends React.Component {
   getStats(character){
     let that = this;
     let urlWords = character.name.split(" ");
-    let url = "http://cors.io/?http://marvel.wikia.com/wiki/";
+    let url = "https://cors.io/?http://marvel.wikia.com/wiki/";
     urlWords.forEach((word, idx) => {
       if (idx === urlWords.length - 1){
         url += word;
@@ -78,7 +78,7 @@ class Character extends React.Component {
       let splitName = name.split(" ");
       let firstName = splitName[0];
       let lastName = splitName[splitName.length - 1];
-      let newUrl = "http://cors.io/?http://marvel.wikia.com/wiki/" + firstName + "_" + lastName + "_(Earth-616)";
+      let newUrl = "https://cors.io/?http://marvel.wikia.com/wiki/" + firstName + "_" + lastName + "_(Earth-616)";
       $.get(newUrl, function(data){
         let htmlData2 = data;
         // let meta2 = $(htmlData2).find("#WikiaMainContentContainer");
@@ -107,7 +107,7 @@ class Character extends React.Component {
   }
 
   getPowers(character){
-    let url = "http://cors.io/?http://marvelousdb.com/character/" + `${character.id}`;
+    let url = "https://cors.io/?http://marvelousdb.com/character/" + `${character.id}`;
     let that = this;
     $.get(url, function(data){
       let htmlData = data;
@@ -118,7 +118,7 @@ class Character extends React.Component {
   }
 
   getAbilities(character){
-    let url = "http://cors.io/?http://marvelousdb.com/character/" + `${character.id}`;
+    let url = "https://cors.io/?http://marvelousdb.com/character/" + `${character.id}`;
     let that = this;
     $.get(url, function(data){
       let htmlData = data;
