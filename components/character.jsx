@@ -107,7 +107,7 @@ class Character extends React.Component {
   }
 
   getPowers(character){
-    let url = "https://cors.io/?http://marvelousdb.com/character/" + `${character.id}`;
+    let url = "https://cors.io/?https://marvelousdb.com/character/" + `${character.id}`;
     let that = this;
     $.get(url, function(data){
       let htmlData = data;
@@ -118,7 +118,7 @@ class Character extends React.Component {
   }
 
   getAbilities(character){
-    let url = "https://cors.io/?http://marvelousdb.com/character/" + `${character.id}`;
+    let url = "https://cors.io/?https://marvelousdb.com/character/" + `${character.id}`;
     let that = this;
     $.get(url, function(data){
       let htmlData = data;
